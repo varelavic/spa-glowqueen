@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
-
+@use '../abstracts/variables' as *;
 /// Event wrapper
 /// @author Harry Roberts
 /// @param {Bool} $self [false] - Whether or not to include current selector
@@ -34,3 +34,18 @@
   }
 }
 
+@mixin button() {
+  display: inline-block;
+  text-align: center;
+  align-content: center;
+  text-decoration: none;
+  background-color:rgba(38, 64, 101, 1);
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  &:hover {
+    background-color: $mid-green;
+    color: $brand-color;
+  }
+}

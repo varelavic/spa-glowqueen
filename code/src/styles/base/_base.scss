@@ -9,6 +9,7 @@
  */
 html {
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 /**
@@ -26,12 +27,4 @@ html {
 /**
  * Basic styles for links
  */
-a {
-  color: abstracts.$brand-color;
-  text-decoration: none;
 
-  @include abstracts.on-event {
-    color: abstracts.$text-color;
-    text-decoration: underline;
-  }
-}
