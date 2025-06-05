@@ -1,0 +1,188 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+div.woman {
+        width: 65%;
+        height: 120%;
+        background-image: url('/img/woman.png');
+        background-size: cover;
+        position: absolute;
+        right: 130px;
+        top: -40px;
+        z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    div {
+        display: inline-block;
+    }
+    .logo img {
+        width: 150px;
+        padding-top: 10px;
+    }
+
+    .navbar {
+        li {
+            display: inline-block;
+            margin-left: 20px;
+            img {
+                transform: translateY(7px);
+            }
+            a {
+                text-decoration: none;
+                &:hover {
+                    color: $mid-green;
+                }
+            }
+        }
+    }
+
+    .clientsnav {
+        margin-left: 160px;
+        ul {
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            align-items: center;
+            li.sign {
+                margin-left: 40px;
+            }
+            a:hover {
+                color: $mid-gray;
+            }
+            img:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 0 rgba(250, 248, 245, 1);
+            }
+            .button:hover {
+                background-color: $mid-gray;
+                color: $brand-color;
+            }
+        }
+    }
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    padding: 10px;
+    &-left {
+        h1 {
+            color: $brand-color;
+            font-weight: 700;
+            font-size: 40px;
+            width: 70%;
+            line-height: 3rem;
+        }
+        p {
+            width: 70%;
+            margin-bottom: 40px;
+        }
+    }
+    &-buttons {
+        margin-bottom: 40px;
+        ul {
+            display: flex;
+            gap: 32px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li.watch a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                &:hover {
+                    color: $mid-green;
+                    img {
+                        background-color: $mid-green;
+                    }
+                }
+            }
+            img{
+                margin-right: 15px;
+                display: inline-flex;
+                justify-content: center;
+                background-color: white;
+                border-radius: 50%;
+                padding: 10px;
+                box-shadow: 0 0 0 2px white;
+            }
+        }
+    }
+    &-scores {
+        display: inline-flex;
+        justify-content: space-between;
+        background-color: white;
+        padding: 20px;
+        width: 450px;
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+        }
+
+        img {
+            width: 50px;
+        }
+
+        h2 {
+            font-weight: 500;
+            color: $brand-color;
+            margin: 0;
+        }
+
+        p {
+            font-weight: 400;
+            margin: 0;
+            align-self: center;
+            width: 120px;
+            line-height: 25px;
+        }
+    }
+    &-right {
+        grid-column: 2 / span 1;
+        position: relative;
+        figure img{
+            width: 400px;
+            position: absolute;
+            left: -20px;
+            top: -15px;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        div {
+            background-color: $comment;
+            width: 250px;
+            border-radius: 20px;
+            padding: 10px;
+            font-size: 12px;
+            h3 {
+                color: $brand-color;
+            }
+            p {
+                color: $brand-color;
+            }
+        }
+        .comment1 {
+            position: absolute;
+            right: 45px;
+            top: 115px;
+        }
+        .comment2 {
+            position: absolute;
+            bottom: 30px;
+        }
+    }
+}

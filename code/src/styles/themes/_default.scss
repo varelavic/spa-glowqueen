@@ -1,0 +1,32 @@
+@use '../abstracts/variables' as *;
+.container {
+    padding: 16px;
+}
+
+body::before {
+    content: '';
+    width: 35%;
+    height: 90%;
+    background-color: $mid-green;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+html::before {
+    content: '';
+    width: 100%;
+    height: 90%;
+    background-color: $mid-gray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+}
+
+a {
+    color: $brand-color;
+}
